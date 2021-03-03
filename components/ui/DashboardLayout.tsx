@@ -15,8 +15,8 @@ const NavBarLink: FC<NavBarLinkProps> = (props) => (
 )
 
 const DashboardLayout: FC = ({ children }) => (
-  <div className="grid grid-cols-12 min-h-screen box-border gap-4 bg-blue-500">
-    <nav className="col-span-3 bg-gray-100 shadow-xl box-border">
+  <div className="min-h-screen flex box-border gap-4 bg-blue-500">
+    <nav className="w-56 min-w-min bg-gray-100 shadow-xl box-border">
       <div className="px-4 py-6">
         <Link href="/">
           <a className="text-l font-bold uppercase text-gray-600 cursor-pointer hover:text-gray-800">
@@ -42,7 +42,7 @@ const DashboardLayout: FC = ({ children }) => (
         </div>
       </div>
     </nav>
-    <main className="col-span-9 ">{children}</main>
+    <main className="p-10 px-80 ">{children}</main>
   </div>
 )
 
