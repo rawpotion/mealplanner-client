@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import Button from '@components/ui/Button'
 
 export default {
@@ -6,7 +6,7 @@ export default {
   component: Button,
 }
 
-export const Basic = () => (
+export const Basic: FC = () => (
   <Button>
     <p>Some button</p>
   </Button>
