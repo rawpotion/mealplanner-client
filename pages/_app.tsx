@@ -13,7 +13,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Head>
         <title>Butik Kærlighilsen</title>
       </Head>
-      <Layout>
+      <Layout pageProps={pageProps}>
         <Component {...pageProps} />
       </Layout>
     </>
