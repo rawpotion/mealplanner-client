@@ -21,7 +21,7 @@ function createIsomorphLink(context: ResolverContext = {}) {
   } else {
     const { HttpLink } = require('@apollo/client')
     return new HttpLink({
-      uri: 'https://localhost:5001/graphql',
+      uri: 'http://localhost:5000/graphql',
     })
   }
 }

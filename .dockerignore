@@ -1,0 +1,9 @@
+.eslintignore
+.eslintrc.json
+.gitignore
+.graphqlconfig
+.idea/
+.next/
+node_modules/
+.storybook/
+yarn-error.log
