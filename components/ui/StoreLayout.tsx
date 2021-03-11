@@ -1,7 +1,8 @@
 import { FC } from 'react'
 import { useApollo } from '@lib/graphql/apollo'
 import { ApolloProvider } from '@apollo/client'
-import NavBar from '@components/ui/NavBar'
+import { Footer } from '@components/ui/index'
+import StoreNavBar from '@components/ui/StoreNavBar'
 
 interface StoreLayoutProps {
   pageProps?: any
@@ -12,9 +13,10 @@ const StoreLayout: FC<StoreLayoutProps> = ({ children, pageProps }) => {
   return (
     <ApolloProvider client={apolloClient}>
       <div className="min-h-screen h-screen flex flex-col">
-        <NavBar />
+        <StoreNavBar />
         {children}
       </div>
+      <Footer />
     </ApolloProvider>
   )
 }

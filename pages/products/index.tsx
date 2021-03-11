@@ -7,7 +7,7 @@ interface ProductLiteProps {
   product: Product
 }
 const ProductLite: FC<ProductLiteProps> = (props) => (
-  <Link href={`/orders/${props.product.id}`}>
+  <Link href={`/products/${props.product.id}`}>
     <img
       src={props.product.imageUrl}
       alt=""
@@ -16,7 +16,7 @@ const ProductLite: FC<ProductLiteProps> = (props) => (
   </Link>
 )
 
-const OrdersPage = () => {
+const ProductsPage = () => {
   const { data, loading, error } = useGetProductsQuery()
 
   if (!data || loading || error) {
@@ -25,8 +25,8 @@ const OrdersPage = () => {
 
   if (data.products) {
     return (
-      <div className="flex-grow grid grid-cols-3 grid-rows-2">
-        <div className="row-span-2 col-span-2">
+      <div className="flex-grow grid grid-rows-3 xl:grid-cols-3 xl:grid-rows-2">
+        <div className="row-span-1 xl:row-span-2 xl:col-span-2">
           <ProductLite product={data.products[0] as Product} />
         </div>
         <div className="row-span-1">
@@ -42,6 +42,6 @@ const OrdersPage = () => {
   return <div></div>
 }
 
-OrdersPage.Layout = StoreLayout
+ProductsPage.Layout = StoreLayout
 
-export default OrdersPage
+export default ProductsPage

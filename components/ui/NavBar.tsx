@@ -1,16 +1,7 @@
 import React, { FC } from 'react'
-import Link from 'next/link'
+import { NavBarLink } from '@components/ui/NavBarLink'
 
-interface NavBarLinkProps {
-  title: string
-}
-const NavBarLink: FC<NavBarLinkProps> = ({ title }) => (
-  <Link href="/">
-    <a className="uppercase text-md cursor-pointer hover:underline">{title}</a>
-  </Link>
-)
-
-const NavBar = () => (
+const NavBar: FC = () => (
   <div className="py-3 shadow-lg">
     <ul className="hidden md:flex px-4 md:px-40 flex-row justify-between box-border max-w-6xl mx-auto">
       <li>

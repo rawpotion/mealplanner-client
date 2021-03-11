@@ -1,7 +1,17 @@
 query GetProducts {
-  products {
-    id
-    name
-    imageUrl
-  }
+    products {
+        id
+        name
+        imageUrl
+    }
+}
+
+query GetProductById($productId: Uuid!) {
+    product(id: $productId) {
+            id
+            name
+            description
+            quantity
+            imageUrl
+        }
 }
